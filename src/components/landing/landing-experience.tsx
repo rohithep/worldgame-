@@ -138,10 +138,6 @@ export function LandingExperience({
           </div>
 
           <div className="animate-cinema-up relative z-10 mx-auto flex w-full max-w-4xl flex-col items-center text-center">
-            <p className="cinema-kicker mb-5 text-[#E8A849] sm:mb-7">
-              Nine Trials · Uncapped Global Ranks
-            </p>
-
             <h1 className="cinema-headline font-heading text-[34px] font-semibold leading-[1.1] tracking-[0.05em] uppercase sm:text-6xl lg:text-[74px]">
               Play. Score. Rank.
               <br />
