@@ -1,26 +1,457 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --bg: #04060A;
+  --bg-elevated: #0A0E16;
+  --surface: rgba(12, 16, 25, 0.74);
+  --ink: #F4F1EA;
+  --muted: #8E98AA;
+  --border: rgba(255, 255, 255, 0.08);
+  --amber: #E8A849;
+  --amber-bright: #F7D186;
+  --steel: #68B0E8;
+  --radius-card: 18px;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-background: var(--bg);
+  --color-surface: var(--surface);
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --color-border: var(--border);
+  --color-primary: var(--amber);
+  --font-sans: var(--font-body), -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-heading: var(--font-display), Georgia, serif;
+  --font-editorial: var(--font-serif), Georgia, serif;
+  --font-mono: var(--font-mono), ui-monospace, monospace;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  background-color: var(--bg);
+  color: var(--ink);
+  color-scheme: dark;
+  text-rendering: optimizeLegibility;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-sans);
+  min-height: 100vh;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Instant zero-delay touch response on all mobile buttons and links */
+a,
+button,
+input,
+select,
+textarea,
+label,
+[role="button"],
+[role="tab"],
+[role="option"] {
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: rgba(232, 168, 73, 0.2);
+}
+
+/* Authentic 70mm IMAX subtle film grain (desktop only — avoids mobile GPU full-screen raster lag) */
+@media (min-width: 768px) and (pointer: fine) {
+  .arcade-noise::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 45;
+    opacity: 0.036;
+    mix-blend-mode: overlay;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.88' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+
+  .arcade-noise::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 44;
+    background: radial-gradient(ellipse 90% 85% at 50% 50%, transparent 58%, rgba(2, 4, 8, 0.72) 100%);
+  }
+}
+
+/* Monumental Nolan IMAX Display Typography */
+h1, h2, .font-heading {
+  font-family: var(--font-heading);
+  letter-spacing: 0.04em;
+}
+
+h3, h4 {
+  font-family: var(--font-sans);
+  letter-spacing: -0.02em;
+}
+
+.font-editorial {
+  font-family: var(--font-serif), Georgia, serif;
+  font-style: italic;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+}
+
+.cinema-kicker {
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  font-weight: 500;
+  letter-spacing: 0.36em;
+  text-transform: uppercase;
+}
+
+.font-score {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.02em;
+}
+
+/* Metallic ivory-to-titanium IMAX headline */
+.apple-headline-gradient,
+.cinema-headline {
+  background: linear-gradient(180deg, #FFFFFF 0%, #EFE9DD 55%, #9AA4B4 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.cinema-amber-text {
+  background: linear-gradient(135deg, #FFF0C4 0%, #E8A849 52%, #C47A1E 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Anamorphic horizontal optical lens flare hairline */
+.cinema-flare {
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(104, 176, 232, 0.18) 18%,
+    rgba(232, 168, 73, 0.9) 50%,
+    rgba(104, 176, 232, 0.18) 82%,
+    transparent 100%
+  );
+  box-shadow: 0 0 20px rgba(232, 168, 73, 0.5);
+}
+
+/* Seamless edge-dissolve mask so imagery melts into obsidian with zero hard cut */
+.cinema-dissolve-bottom {
+  mask-image: linear-gradient(to bottom, black 0%, black 58%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to bottom, black 0%, black 58%, transparent 100%);
+}
+
+/* ==========================================================================
+   Architectural Smoked Obsidian Monolith Surfaces
+   (Lightweight opaque-gradient glass on mobile for 60fps; full backdrop blur on desktop)
+   ========================================================================== */
+
+.arcade-card,
+.apple-glass {
+  background: linear-gradient(
+    165deg,
+    rgba(16, 21, 32, 0.94) 0%,
+    rgba(8, 11, 18, 0.96) 100%
+  );
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  border-radius: var(--radius-card);
+  box-shadow:
+    0 16px 40px -20px rgba(0, 0, 0, 0.85),
+    inset 0 1px 0 rgba(255, 235, 200, 0.12);
+}
+
+@media (min-width: 768px) {
+  .arcade-card,
+  .apple-glass {
+    background: linear-gradient(
+      165deg,
+      rgba(16, 21, 32, 0.74) 0%,
+      rgba(7, 10, 17, 0.86) 100%
+    );
+    backdrop-filter: blur(22px) saturate(135%);
+    -webkit-backdrop-filter: blur(22px) saturate(135%);
+  }
+}
+
+.apple-glass-pill {
+  background: rgba(9, 13, 21, 0.78);
+  backdrop-filter: blur(24px) saturate(150%);
+  -webkit-backdrop-filter: blur(24px) saturate(150%);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow:
+    0 12px 32px -12px rgba(0, 0, 0, 0.75),
+    inset 0 1px 0 rgba(255, 235, 200, 0.12);
+}
+
+.arcade-card-hover {
+  transition:
+    transform 420ms cubic-bezier(0.16, 1, 0.3, 1),
+    border-color 360ms ease,
+    box-shadow 420ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.arcade-card-hover:hover {
+  transform: translateY(-4px);
+  border-color: rgba(232, 168, 73, 0.34);
+  box-shadow:
+    0 32px 72px -22px rgba(0, 0, 0, 0.95),
+    0 0 36px -14px rgba(232, 168, 73, 0.18),
+    inset 0 1px 0 rgba(255, 235, 200, 0.24);
+}
+
+/* ==========================================================================
+   Precision Cinema Action Buttons (Architectural Chamfered / Crisp Frames)
+   ========================================================================== */
+
+.arcade-btn {
+  transition:
+    transform 240ms cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 240ms cubic-bezier(0.16, 1, 0.3, 1),
+    background 240ms ease,
+    border-color 240ms ease;
+}
+
+.arcade-btn-primary {
+  background: linear-gradient(180deg, #F3C46E 0%, #D99432 100%);
+  color: #07090E;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  box-shadow:
+    0 10px 30px -10px rgba(232, 168, 73, 0.55),
+    inset 0 1px 0 rgba(255, 250, 235, 0.7);
+}
+
+.arcade-btn-primary:hover:not(:disabled) {
+  background: linear-gradient(180deg, #F9D288 0%, #E5A240 100%);
+  transform: translateY(-1px);
+  box-shadow:
+    0 16px 38px -10px rgba(232, 168, 73, 0.72),
+    inset 0 1px 0 rgba(255, 250, 235, 0.85);
+}
+
+.arcade-btn-primary:active:not(:disabled) {
+  transform: scale(0.98);
+}
+
+.arcade-btn-secondary {
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  color: #F4F1EA;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+.arcade-btn-secondary:hover:not(:disabled) {
+  background: rgba(255, 255, 255, 0.09);
+  border-color: rgba(232, 168, 73, 0.5);
+  transform: translateY(-1px);
+}
+
+.arcade-btn-secondary:active:not(:disabled) {
+  transform: scale(0.98);
+}
+
+/* Cinema Segmented Control */
+.apple-segmented {
+  background: rgba(255, 255, 255, 0.035);
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border-radius: 14px;
+  padding: 4px;
+}
+
+.contact-shadow {
+  background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 70%);
+}
+
+@keyframes hue-rotate-slow {
+  0% { filter: hue-rotate(0deg); }
+  100% { filter: hue-rotate(360deg); }
+}
+
+@keyframes cinemaFadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-cinema-up {
+  animation: cinemaFadeUp 750ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.animate-hue-slow {
+  animation: hue-rotate-slow 14s linear infinite;
+}
+
+/* Harmonize inner-page dark cinema contrast seamlessly — zero white-on-white anywhere */
+input,
+input:hover,
+input:focus,
+input:active,
+textarea,
+textarea:hover,
+textarea:focus,
+select,
+select:hover,
+select:focus {
+  background-color: #0B101B !important;
+  color: #F4F1EA !important;
+  -webkit-text-fill-color: #F4F1EA !important;
+  caret-color: #E8A849 !important;
+}
+
+input[type="range"],
+input[type="range"]:hover,
+input[type="range"]:focus,
+input[type="checkbox"],
+input[type="checkbox"]:hover,
+input[type="checkbox"]:focus {
+  background-color: transparent !important;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #6E7A8F !important;
+  -webkit-text-fill-color: #6E7A8F !important;
+  opacity: 1 !important;
+}
+
+/* Override Chrome / Safari / Edge bright white/blue autofill background */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+  -webkit-text-fill-color: #F4F1EA !important;
+  caret-color: #E8A849 !important;
+  -webkit-box-shadow: 0 0 0px 1000px #0B101B inset !important;
+  box-shadow: 0 0 0px 1000px #0B101B inset !important;
+  border-color: rgba(232, 168, 73, 0.45) !important;
+  transition: background-color 600000s ease-in-out 0s;
+}
+
+.text-\[\#0B1220\],
+.text-\[\#1D1D1F\],
+.text-\[\#0B1220\]\/75 {
+  color: #F4F1EA;
+}
+
+.text-\[\#5B6475\],
+.text-\[\#6E6E73\],
+.text-\[\#8E98AB\],
+.text-\[\#9AA5B8\] {
+  color: #9AA3B2;
+}
+
+.text-\[\#2F6BFF\],
+.text-\[\#0071E3\] {
+  color: #E8A849;
+}
+
+.bg-white,
+.bg-white\/90,
+.bg-white\/85,
+.bg-white\/80,
+.bg-white\/75,
+.bg-white\/70 {
+  background-color: #0D1320;
+}
+
+.bg-\[\#F7F9FC\],
+.bg-\[\#F7F9FC\]\/80,
+.bg-\[\#F4F7FC\],
+.bg-\[\#F2F5FB\],
+.bg-\[\#EEF2FA\],
+.bg-\[\#EEF2FA\]\/70,
+.bg-\[\#EEF4FF\],
+.bg-\[\#EEF4FF\]\/80,
+.bg-\[\#EEF2FF\],
+.bg-\[\#EEF3FF\] {
+  background-color: rgba(255, 255, 255, 0.045);
+}
+
+.bg-\[\#FFF8E8\],
+.bg-\[\#FFF7E6\],
+.bg-\[\#FFF1EC\] {
+  background-color: rgba(232, 168, 73, 0.14);
+}
+
+.bg-\[\#E9F9F2\],
+.bg-\[\#E7F8F6\],
+.bg-\[\#E6F9FC\] {
+  background-color: rgba(25, 179, 125, 0.14);
+}
+
+.bg-\[\#FFF0F3\],
+.bg-\[\#FFEEF4\] {
+  background-color: rgba(229, 57, 77, 0.15);
+}
+
+.text-\[\#7A4D00\],
+.text-\[\#B37400\],
+.text-\[\#C27803\],
+.text-\[\#D95532\] {
+  color: #F7D186;
+}
+
+.text-\[\#0E6B4A\],
+.text-\[\#10825B\],
+.text-\[\#0E857A\],
+.text-\[\#0089A3\] {
+  color: #48D6A4;
+}
+
+.text-\[\#B91C3B\],
+.text-\[\#C92544\],
+.text-\[\#CC2966\] {
+  color: #FF7A8A;
+}
+
+.border-\[\#E6EAF2\],
+.border-\[\#D9E1EE\],
+.border-\[\#E6EAF2\]\/70,
+.border-\[\#E6EAF2\]\/80 {
+  border-color: rgba(255, 255, 255, 0.12);
+}
+
+.divide-\[\#E6EAF2\] > :not(:last-child),
+.divide-\[\#E6EAF2\]\/80 > :not(:last-child) {
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+select,
+select option {
+  background-color: #0B101A;
+  color: #F4F1EA;
+}
+
+:focus-visible {
+  outline: 2px solid rgba(232, 168, 73, 0.85);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
 }
