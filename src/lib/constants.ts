@@ -177,7 +177,7 @@ export const GAMES: GameDefinition[] = [
   {
     slug: "blurry-reveal",
     name: "Blurry Reveal",
-    shortDesc: "5 rounds. Guess the sharpening illustration as early as you can.",
+    shortDesc: "5 rounds. Guess the sharpening real photo as early as you can.",
     rules: [
       "Each round starts heavily blurred and sharpens smoothly over 15 seconds.",
       "Pick from 4 options or type your answer early for up to 1,000 points per round.",

@@ -91,6 +91,14 @@ export function BlurryRevealGame({ onFinish }: GameRenderProps) {
     []
   );
 
+  // Preload next round's photo so transitions are instant
+  useEffect(() => {
+    const nextItem = rounds[roundIdx + 1]?.item;
+    if (!nextItem) return;
+    const img = new window.Image();
+    img.src = nextItem.image;
+  }, [rounds, roundIdx]);
+
   // Timer loop for current round
   useEffect(() => {
     if (rounds.length === 0 || roundResult) return;
@@ -155,8 +163,8 @@ export function BlurryRevealGame({ onFinish }: GameRenderProps) {
   }
   if (!current) {
     return (
-      <div className="py-16 text-center text-sm text-[#9AA3B2]">
-        Loading illustrations...
+      <div className="py-16 text-center text-sm text-[#8E98AA]">
+        Loading photos...
       </div>
     );
   }
@@ -168,24 +176,27 @@ export function BlurryRevealGame({ onFinish }: GameRenderProps) {
   return (
     <div className="mx-auto max-w-xl space-y-5">
       <div className="flex items-center justify-between text-sm">
-        <span className="rounded-full bg-[#EEF2FF] px-3.5 py-1 font-bold text-[#4B6AE6]">
+        <span className="rounded-full border border-[#E8A849]/30 bg-[#E8A849]/10 px-3.5 py-1 font-mono text-xs font-semibold tracking-wider text-[#E8A849] uppercase">
           Round {roundIdx + 1} / {TOTAL_ROUNDS} • {current.item.category}
         </span>
-        <span className="font-score text-lg font-bold text-[#0B1220]">
-          Total: <span className="text-[#6C8CFF]">{totalScore.toLocaleString("en-US")}</span>
+        <span className="font-score text-lg font-bold text-[#F4F1EA]">
+          Total: <span className="text-[#E8A849]">{totalScore.toLocaleString("en-US")}</span>
         </span>
       </div>
 
-      <div className="relative mx-auto flex aspect-square max-w-[290px] items-center justify-center overflow-hidden rounded-3xl border border-[#E6EAF2] bg-white shadow-sm">
+      <div className="relative mx-auto flex aspect-square max-w-[310px] items-center justify-center overflow-hidden rounded-3xl border border-white/15 bg-[#0B0F17] shadow-[0_24px_60px_rgba(0,0,0,0.55)]">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src={current.item.image}
-          alt={roundResult ? current.item.answer : "Blurred mystery illustration"}
-          className="h-full w-full object-contain transition-[filter] duration-100"
+          alt={roundResult ? current.item.answer : "Blurred mystery photo"}
+          className={cn(
+            "h-full w-full object-cover transition-[filter,transform] duration-150",
+            !roundResult && "scale-110"
+          )}
           style={{ filter: `blur(${blurPx.toFixed(1)}px)` }}
         />
         {!roundResult && (
-          <span className="font-score absolute right-3 top-3 rounded-full bg-white/90 px-3 py-1 text-xs font-bold text-[#0B1220] shadow-xs">
+          <span className="font-score absolute right-3 top-3 rounded-full border border-white/15 bg-[#04060A]/80 px-3 py-1 text-xs font-bold text-[#E8A849] backdrop-blur-md">
             +{potentialPts} pts
           </span>
         )}
@@ -197,21 +208,21 @@ export function BlurryRevealGame({ onFinish }: GameRenderProps) {
             className={cn(
               "rounded-2xl border p-4",
               roundResult.correct
-                ? "border-[#19B37D]/40 bg-[#E9F9F2]"
-                : "border-[#E5394D]/30 bg-[#FFF0F3]"
+                ? "border-[#19B37D]/40 bg-[#19B37D]/12"
+                : "border-[#E5394D]/40 bg-[#E5394D]/12"
             )}
           >
-            <p className="font-heading text-xl font-bold text-[#0B1220]">
+            <p className="font-heading text-xl font-bold text-[#F4F1EA]">
               {current.item.answer}
             </p>
-            <p className="font-score mt-1 text-sm font-bold text-[#5B6475]">
+            <p className="font-score mt-1 text-sm font-bold text-[#C8D0DC]">
               {roundResult.correct
                 ? `+${roundResult.points} points!`
                 : "0 points — better luck next round"}
             </p>
           </div>
           <Button type="button" size="lg" className="w-full" onClick={handleNext}>
-            {roundIdx + 1 >= TOTAL_ROUNDS ? "See Final Score" : "Next Illustration →"}
+            {roundIdx + 1 >= TOTAL_ROUNDS ? "See Final Score" : "Next Photo →"}
           </Button>
         </div>
       ) : (

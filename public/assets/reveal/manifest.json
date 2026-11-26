@@ -9,7 +9,7 @@
         "star"
       ],
       "category": "Nature",
-      "image": "/assets/reveal/sun.svg"
+      "image": "/assets/reveal/photos/sun.jpg"
     },
     {
       "id": "moon",
@@ -19,7 +19,7 @@
         "crescent"
       ],
       "category": "Space",
-      "image": "/assets/reveal/moon.svg"
+      "image": "/assets/reveal/photos/moon.jpg"
     },
     {
       "id": "rocket",
@@ -29,7 +29,7 @@
         "shuttle"
       ],
       "category": "Space",
-      "image": "/assets/reveal/rocket.svg"
+      "image": "/assets/reveal/photos/rocket.jpg"
     },
     {
       "id": "planet",
@@ -39,7 +39,7 @@
         "ringed planet"
       ],
       "category": "Space",
-      "image": "/assets/reveal/planet.svg"
+      "image": "/assets/reveal/photos/planet.jpg"
     },
     {
       "id": "apple",
@@ -49,7 +49,7 @@
         "fruit"
       ],
       "category": "Food",
-      "image": "/assets/reveal/apple.svg"
+      "image": "/assets/reveal/photos/apple.jpg"
     },
     {
       "id": "pizza",
@@ -58,7 +58,7 @@
         "pizza slice"
       ],
       "category": "Food",
-      "image": "/assets/reveal/pizza.svg"
+      "image": "/assets/reveal/photos/pizza.jpg"
     },
     {
       "id": "burger",
@@ -68,7 +68,7 @@
         "cheeseburger"
       ],
       "category": "Food",
-      "image": "/assets/reveal/burger.svg"
+      "image": "/assets/reveal/photos/burger.jpg"
     },
     {
       "id": "icecream",
@@ -78,7 +78,7 @@
         "cone"
       ],
       "category": "Food",
-      "image": "/assets/reveal/icecream.svg"
+      "image": "/assets/reveal/photos/icecream.jpg"
     },
     {
       "id": "coffee",
@@ -89,7 +89,7 @@
         "tea"
       ],
       "category": "Food",
-      "image": "/assets/reveal/coffee.svg"
+      "image": "/assets/reveal/photos/coffee.jpg"
     },
     {
       "id": "watermelon",
@@ -98,7 +98,7 @@
         "melon"
       ],
       "category": "Food",
-      "image": "/assets/reveal/watermelon.svg"
+      "image": "/assets/reveal/photos/watermelon.jpg"
     },
     {
       "id": "donut",
@@ -107,7 +107,7 @@
         "doughnut"
       ],
       "category": "Food",
-      "image": "/assets/reveal/donut.svg"
+      "image": "/assets/reveal/photos/donut.jpg"
     },
     {
       "id": "banana",
@@ -116,7 +116,7 @@
         "bananas"
       ],
       "category": "Food",
-      "image": "/assets/reveal/banana.svg"
+      "image": "/assets/reveal/photos/banana.jpg"
     },
     {
       "id": "carrot",
@@ -125,7 +125,7 @@
         "vegetable"
       ],
       "category": "Food",
-      "image": "/assets/reveal/carrot.svg"
+      "image": "/assets/reveal/photos/carrot.jpg"
     },
     {
       "id": "cake",
@@ -134,7 +134,7 @@
         "cake"
       ],
       "category": "Food",
-      "image": "/assets/reveal/cake.svg"
+      "image": "/assets/reveal/photos/cake.jpg"
     },
     {
       "id": "bicycle",
@@ -143,7 +143,7 @@
         "bike"
       ],
       "category": "Transport",
-      "image": "/assets/reveal/bicycle.svg"
+      "image": "/assets/reveal/photos/bicycle.jpg"
     },
     {
       "id": "car",
@@ -153,7 +153,7 @@
         "sedan"
       ],
       "category": "Transport",
-      "image": "/assets/reveal/car.svg"
+      "image": "/assets/reveal/photos/car.jpg"
     },
     {
       "id": "airplane",
@@ -163,7 +163,7 @@
         "jet"
       ],
       "category": "Transport",
-      "image": "/assets/reveal/airplane.svg"
+      "image": "/assets/reveal/photos/airplane.jpg"
     },
     {
       "id": "sailboat",
@@ -174,7 +174,7 @@
         "ship"
       ],
       "category": "Transport",
-      "image": "/assets/reveal/sailboat.svg"
+      "image": "/assets/reveal/photos/sailboat.jpg"
     },
     {
       "id": "train",
@@ -184,7 +184,7 @@
         "subway"
       ],
       "category": "Transport",
-      "image": "/assets/reveal/train.svg"
+      "image": "/assets/reveal/photos/train.jpg"
     },
     {
       "id": "anchor",
@@ -193,7 +193,7 @@
         "ship anchor"
       ],
       "category": "Objects",
-      "image": "/assets/reveal/anchor.svg"
+      "image": "/assets/reveal/photos/anchor.jpg"
     },
     {
       "id": "umbrella",
@@ -202,7 +202,7 @@
         "parasol"
       ],
       "category": "Objects",
-      "image": "/assets/reveal/umbrella.svg"
+      "image": "/assets/reveal/photos/umbrella.jpg"
     },
     {
       "id": "camera",
@@ -211,7 +211,7 @@
         "photo camera"
       ],
       "category": "Objects",
-      "image": "/assets/reveal/camera.svg"
+      "image": "/assets/reveal/photos/camera.jpg"
     },
     {
       "id": "guitar",
@@ -220,7 +220,7 @@
         "acoustic guitar"
       ],
       "category": "Music",
-      "image": "/assets/reveal/guitar.svg"
+      "image": "/assets/reveal/photos/guitar.jpg"
     },
     {
       "id": "headphones",
@@ -229,7 +229,7 @@
         "headset"
       ],
       "category": "Music",
-      "image": "/assets/reveal/headphones.svg"
+      "image": "/assets/reveal/photos/headphones.jpg"
     },
     {
       "id": "musicnote",
@@ -239,7 +239,7 @@
         "eighth note"
       ],
       "category": "Music",
-      "image": "/assets/reveal/musicnote.svg"
+      "image": "/assets/reveal/photos/musicnote.jpg"
     },
     {
       "id": "clock",
@@ -249,7 +249,7 @@
         "watch"
       ],
       "category": "Objects",
-      "image": "/assets/reveal/clock.svg"
+      "image": "/assets/reveal/photos/clock.jpg"
     },
     {
       "id": "lightbulb",
@@ -259,7 +259,7 @@
         "lamp"
       ],
       "category": "Objects",
-      "image": "/assets/reveal/lightbulb.svg"
+      "image": "/assets/reveal/photos/lightbulb.jpg"
     },
     {
       "id": "key",
@@ -268,7 +268,7 @@
         "house key"
       ],
       "category": "Objects",
-      "image": "/assets/reveal/key.svg"
+      "image": "/assets/reveal/photos/key.jpg"
     },
     {
       "id": "crown",
@@ -278,7 +278,7 @@
         "royal crown"
       ],
       "category": "Objects",
-      "image": "/assets/reveal/crown.svg"
+      "image": "/assets/reveal/photos/crown.jpg"
     },
     {
       "id": "diamond",
@@ -288,7 +288,7 @@
         "jewel"
       ],
       "category": "Objects",
-      "image": "/assets/reveal/diamond.svg"
+      "image": "/assets/reveal/photos/diamond.jpg"
     },
     {
       "id": "trophy",
@@ -298,7 +298,7 @@
         "award"
       ],
       "category": "Objects",
-      "image": "/assets/reveal/trophy.svg"
+      "image": "/assets/reveal/photos/trophy.jpg"
     },
     {
       "id": "compass",
@@ -307,7 +307,7 @@
         "navigation"
       ],
       "category": "Objects",
-      "image": "/assets/reveal/compass.svg"
+      "image": "/assets/reveal/photos/compass.jpg"
     },
     {
       "id": "book",
@@ -317,7 +317,7 @@
         "notebook"
       ],
       "category": "Objects",
-      "image": "/assets/reveal/book.svg"
+      "image": "/assets/reveal/photos/book.jpg"
     },
     {
       "id": "pencil",
@@ -327,7 +327,7 @@
         "pen"
       ],
       "category": "Objects",
-      "image": "/assets/reveal/pencil.svg"
+      "image": "/assets/reveal/photos/pencil.jpg"
     },
     {
       "id": "scissors",
@@ -336,7 +336,7 @@
         "shears"
       ],
       "category": "Objects",
-      "image": "/assets/reveal/scissors.svg"
+      "image": "/assets/reveal/photos/scissors.jpg"
     },
     {
       "id": "magnet",
@@ -345,7 +345,7 @@
         "horseshoe magnet"
       ],
       "category": "Objects",
-      "image": "/assets/reveal/magnet.svg"
+      "image": "/assets/reveal/photos/magnet.jpg"
     },
     {
       "id": "hourglass",
@@ -355,7 +355,7 @@
         "timer"
       ],
       "category": "Objects",
-      "image": "/assets/reveal/hourglass.svg"
+      "image": "/assets/reveal/photos/hourglass.jpg"
     },
     {
       "id": "gift",
@@ -365,7 +365,7 @@
         "gift"
       ],
       "category": "Objects",
-      "image": "/assets/reveal/gift.svg"
+      "image": "/assets/reveal/photos/gift.jpg"
     },
     {
       "id": "balloon",
@@ -374,7 +374,7 @@
         "party balloon"
       ],
       "category": "Objects",
-      "image": "/assets/reveal/balloon.svg"
+      "image": "/assets/reveal/photos/balloon.jpg"
     },
     {
       "id": "tree",
@@ -385,7 +385,7 @@
         "christmas tree"
       ],
       "category": "Nature",
-      "image": "/assets/reveal/tree.svg"
+      "image": "/assets/reveal/photos/tree.jpg"
     },
     {
       "id": "cactus",
@@ -394,7 +394,7 @@
         "desert cactus"
       ],
       "category": "Nature",
-      "image": "/assets/reveal/cactus.svg"
+      "image": "/assets/reveal/photos/cactus.jpg"
     },
     {
       "id": "flower",
@@ -405,7 +405,7 @@
         "blossom"
       ],
       "category": "Nature",
-      "image": "/assets/reveal/flower.svg"
+      "image": "/assets/reveal/photos/flower.jpg"
     },
     {
       "id": "mountain",
@@ -416,7 +416,7 @@
         "volcano"
       ],
       "category": "Nature",
-      "image": "/assets/reveal/mountain.svg"
+      "image": "/assets/reveal/photos/mountain.jpg"
     },
     {
       "id": "rainbow",
@@ -425,7 +425,7 @@
         "rainbows"
       ],
       "category": "Nature",
-      "image": "/assets/reveal/rainbow.svg"
+      "image": "/assets/reveal/photos/rainbow.jpg"
     },
     {
       "id": "lightning",
@@ -436,7 +436,7 @@
         "bolt"
       ],
       "category": "Nature",
-      "image": "/assets/reveal/lightning.svg"
+      "image": "/assets/reveal/photos/lightning.jpg"
     },
     {
       "id": "snowflake",
@@ -446,7 +446,7 @@
         "ice crystal"
       ],
       "category": "Nature",
-      "image": "/assets/reveal/snowflake.svg"
+      "image": "/assets/reveal/photos/snowflake.jpg"
     },
     {
       "id": "cloud",
@@ -455,7 +455,7 @@
         "rain cloud"
       ],
       "category": "Nature",
-      "image": "/assets/reveal/cloud.svg"
+      "image": "/assets/reveal/photos/cloud.jpg"
     },
     {
       "id": "butterfly",
@@ -464,7 +464,7 @@
         "moth"
       ],
       "category": "Animals",
-      "image": "/assets/reveal/butterfly.svg"
+      "image": "/assets/reveal/photos/butterfly.jpg"
     },
     {
       "id": "fish",
@@ -474,7 +474,7 @@
         "tropical fish"
       ],
       "category": "Animals",
-      "image": "/assets/reveal/fish.svg"
+      "image": "/assets/reveal/photos/fish.jpg"
     },
     {
       "id": "owl",
@@ -483,7 +483,7 @@
         "bird"
       ],
       "category": "Animals",
-      "image": "/assets/reveal/owl.svg"
+      "image": "/assets/reveal/photos/owl.jpg"
     },
     {
       "id": "cat",
@@ -493,7 +493,7 @@
         "kitty"
       ],
       "category": "Animals",
-      "image": "/assets/reveal/cat.svg"
+      "image": "/assets/reveal/photos/cat.jpg"
     },
     {
       "id": "panda",
@@ -503,7 +503,7 @@
         "bear"
       ],
       "category": "Animals",
-      "image": "/assets/reveal/panda.svg"
+      "image": "/assets/reveal/photos/panda.jpg"
     },
     {
       "id": "penguin",
@@ -512,7 +512,7 @@
         "emperor penguin"
       ],
       "category": "Animals",
-      "image": "/assets/reveal/penguin.svg"
+      "image": "/assets/reveal/photos/penguin.jpg"
     },
     {
       "id": "turtle",
@@ -522,7 +522,7 @@
         "sea turtle"
       ],
       "category": "Animals",
-      "image": "/assets/reveal/turtle.svg"
+      "image": "/assets/reveal/photos/turtle.jpg"
     },
     {
       "id": "ladybug",
@@ -532,7 +532,7 @@
         "beetle"
       ],
       "category": "Animals",
-      "image": "/assets/reveal/ladybug.svg"
+      "image": "/assets/reveal/photos/ladybug.jpg"
     },
     {
       "id": "basketball",
@@ -541,7 +541,7 @@
         "ball"
       ],
       "category": "Sports",
-      "image": "/assets/reveal/basketball.svg"
+      "image": "/assets/reveal/photos/basketball.jpg"
     },
     {
       "id": "soccer",
@@ -551,7 +551,7 @@
         "soccer"
       ],
       "category": "Sports",
-      "image": "/assets/reveal/soccer.svg"
+      "image": "/assets/reveal/photos/soccer.jpg"
     },
     {
       "id": "chess",
@@ -561,7 +561,7 @@
         "pawn"
       ],
       "category": "Games",
-      "image": "/assets/reveal/chess.svg"
+      "image": "/assets/reveal/photos/chess.jpg"
     },
     {
       "id": "dice",
@@ -571,7 +571,7 @@
         "cube"
       ],
       "category": "Games",
-      "image": "/assets/reveal/dice.svg"
+      "image": "/assets/reveal/photos/dice.jpg"
     },
     {
       "id": "pyramid",
@@ -581,7 +581,7 @@
         "giza"
       ],
       "category": "Landmarks",
-      "image": "/assets/reveal/pyramid.svg"
+      "image": "/assets/reveal/photos/pyramid.jpg"
     },
     {
       "id": "lighthouse",
@@ -590,7 +590,7 @@
         "tower"
       ],
       "category": "Landmarks",
-      "image": "/assets/reveal/lighthouse.svg"
+      "image": "/assets/reveal/photos/lighthouse.jpg"
     },
     {
       "id": "house",
@@ -600,7 +600,7 @@
         "cottage"
       ],
       "category": "Landmarks",
-      "image": "/assets/reveal/house.svg"
+      "image": "/assets/reveal/photos/house.jpg"
     },
     {
       "id": "castle",
@@ -610,7 +610,7 @@
         "palace"
       ],
       "category": "Landmarks",
-      "image": "/assets/reveal/castle.svg"
+      "image": "/assets/reveal/photos/castle.jpg"
     },
     {
       "id": "heart",
@@ -619,7 +619,7 @@
         "love heart"
       ],
       "category": "Symbols",
-      "image": "/assets/reveal/heart.svg"
+      "image": "/assets/reveal/photos/heart.jpg"
     },
     {
       "id": "star",
@@ -628,7 +628,7 @@
         "gold star"
       ],
       "category": "Symbols",
-      "image": "/assets/reveal/star.svg"
+      "image": "/assets/reveal/photos/star.jpg"
     },
     {
       "id": "glasses",
@@ -639,7 +639,7 @@
         "spectacles"
       ],
       "category": "Objects",
-      "image": "/assets/reveal/glasses.svg"
+      "image": "/assets/reveal/photos/glasses.jpg"
     },
     {
       "id": "backpack",
@@ -649,7 +649,7 @@
         "bag"
       ],
       "category": "Objects",
-      "image": "/assets/reveal/backpack.svg"
+      "image": "/assets/reveal/photos/backpack.jpg"
     },
     {
       "id": "microphone",
@@ -658,7 +658,7 @@
         "mic"
       ],
       "category": "Music",
-      "image": "/assets/reveal/microphone.svg"
+      "image": "/assets/reveal/photos/microphone.jpg"
     },
     {
       "id": "telescope",
@@ -667,7 +667,7 @@
         "spyglass"
       ],
       "category": "Space",
-      "image": "/assets/reveal/telescope.svg"
+      "image": "/assets/reveal/photos/telescope.jpg"
     },
     {
       "id": "submarine",
@@ -677,7 +677,7 @@
         "u-boat"
       ],
       "category": "Transport",
-      "image": "/assets/reveal/submarine.svg"
+      "image": "/assets/reveal/photos/submarine.jpg"
     },
     {
       "id": "helicopter",
@@ -687,7 +687,7 @@
         "heli"
       ],
       "category": "Transport",
-      "image": "/assets/reveal/helicopter.svg"
+      "image": "/assets/reveal/photos/helicopter.jpg"
     },
     {
       "id": "hotairballoon",
@@ -696,7 +696,7 @@
         "air balloon"
       ],
       "category": "Transport",
-      "image": "/assets/reveal/hotairballoon.svg"
+      "image": "/assets/reveal/photos/hotairballoon.jpg"
     },
     {
       "id": "tent",
@@ -706,7 +706,7 @@
         "camp"
       ],
       "category": "Objects",
-      "image": "/assets/reveal/tent.svg"
+      "image": "/assets/reveal/photos/tent.jpg"
     },
     {
       "id": "campfire",
@@ -716,7 +716,7 @@
         "bonfire"
       ],
       "category": "Nature",
-      "image": "/assets/reveal/campfire.svg"
+      "image": "/assets/reveal/photos/campfire.jpg"
     },
     {
       "id": "volcano",
@@ -725,7 +725,7 @@
         "eruption"
       ],
       "category": "Nature",
-      "image": "/assets/reveal/volcano.svg"
+      "image": "/assets/reveal/photos/volcano.jpg"
     },
     {
       "id": "microscope",
@@ -734,7 +734,7 @@
         "lab microscope"
       ],
       "category": "Science",
-      "image": "/assets/reveal/microscope.svg"
+      "image": "/assets/reveal/photos/microscope.jpg"
     },
     {
       "id": "robot",
@@ -744,7 +744,7 @@
         "android"
       ],
       "category": "Tech",
-      "image": "/assets/reveal/robot.svg"
+      "image": "/assets/reveal/photos/robot.jpg"
     },
     {
       "id": "satellite",
@@ -753,7 +753,7 @@
         "space satellite"
       ],
       "category": "Space",
-      "image": "/assets/reveal/satellite.svg"
+      "image": "/assets/reveal/photos/satellite.jpg"
     },
     {
       "id": "violin",
@@ -763,7 +763,7 @@
         "cello"
       ],
       "category": "Music",
-      "image": "/assets/reveal/violin.svg"
+      "image": "/assets/reveal/photos/violin.jpg"
     },
     {
       "id": "skateboard",
@@ -773,7 +773,7 @@
         "board"
       ],
       "category": "Sports",
-      "image": "/assets/reveal/skateboard.svg"
+      "image": "/assets/reveal/photos/skateboard.jpg"
     },
     {
       "id": "surfboard",
@@ -782,7 +782,7 @@
         "surf"
       ],
       "category": "Sports",
-      "image": "/assets/reveal/surfboard.svg"
+      "image": "/assets/reveal/photos/surfboard.jpg"
     },
     {
       "id": "mushroom",
@@ -791,7 +791,7 @@
         "toadstool"
       ],
       "category": "Nature",
-      "image": "/assets/reveal/mushroom.svg"
+      "image": "/assets/reveal/photos/mushroom.jpg"
     },
     {
       "id": "cupcake",
@@ -800,7 +800,7 @@
         "muffin"
       ],
       "category": "Food",
-      "image": "/assets/reveal/cupcake.svg"
+      "image": "/assets/reveal/photos/cupcake.jpg"
     },
     {
       "id": "avocado",
@@ -809,7 +809,7 @@
         "guacamole"
       ],
       "category": "Food",
-      "image": "/assets/reveal/avocado.svg"
+      "image": "/assets/reveal/photos/avocado.jpg"
     },
     {
       "id": "trophycup",
@@ -819,7 +819,7 @@
         "ribbon"
       ],
       "category": "Sports",
-      "image": "/assets/reveal/trophycup.svg"
+      "image": "/assets/reveal/photos/trophycup.jpg"
     }
   ]
 }
