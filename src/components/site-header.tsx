@@ -2,6 +2,7 @@ import Link from "next/link";
 import { getCurrentPlayer } from "@/lib/auth";
 import { SITE_NAME } from "@/lib/constants";
 import { CountryFlag } from "./ui/flag";
+import { NavLinks } from "./nav-links";
 import { Shield } from "lucide-react";
 
 export async function SiteHeader() {
@@ -29,18 +30,7 @@ export async function SiteHeader() {
         </Link>
 
         <nav aria-label="Main navigation" className="flex shrink-0 items-center gap-1 sm:gap-2">
-          <Link
-            href="/games"
-            className="inline-flex min-h-9 items-center rounded-lg px-2.5 font-mono text-[10.5px] font-medium tracking-[0.16em] text-[#8E98AA] uppercase transition-colors hover:bg-white/[0.05] hover:text-[#F4F1EA] sm:px-3.5 sm:text-[11px] sm:tracking-[0.2em]"
-          >
-            Games
-          </Link>
-          <Link
-            href="/leaderboard/higher-or-lower"
-            className="hidden min-h-9 items-center rounded-lg px-3.5 font-mono text-[11px] font-medium tracking-[0.2em] text-[#8E98AA] uppercase transition-colors hover:bg-white/[0.05] hover:text-[#F4F1EA] sm:inline-flex"
-          >
-            Boards
-          </Link>
+          <NavLinks />
 
           {player ? (
             <div className="ml-1 flex items-center gap-1.5 sm:ml-2 sm:gap-2">
